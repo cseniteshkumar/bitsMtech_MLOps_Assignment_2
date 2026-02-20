@@ -163,13 +163,13 @@ mlruns/
 wandb/
 wandb_offline/
 
-# DVC (Data Version Control)
-.dvc/
-.dvc.local
-dvc.lock
-*.dvc.yaml
-*.dvc
-.dvcignore
+# DVC (Data Version Control) 
+# .dvc/
+# .dvc.local
+# dvc.lock
+# *.dvc.yaml
+# *.dvc
+# .dvcignore
 
 # Ray
 ray_results/
