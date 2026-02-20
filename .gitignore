@@ -1,0 +1,307 @@
+# ============================================================================
+# PYTHON ENVIRONMENT & PACKAGES
+# ============================================================================
+# Virtual environment directories
+.mlopsAssignment2Env/
+.mlopsAssignment2Env
+.mlopsAssignment2Env/*
+venv/
+env/
+ENV/
+.venv/
+.env/
+test_env/
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+.easy_install.pth
+*.pth
+*.whl
+
+# ============================================================================
+# IDE & EDITOR SPECIFIC
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+.vscode-server/
+
+# PyCharm/IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.gradle/
+
+# Sublime Text
+.sublime-project
+.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Nano
+.nano_history
+
+# ============================================================================
+# OS SPECIFIC FILES
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.AppleDouble
+.LSOverride
+
+# ============================================================================
+# MACHINE LEARNING - DATA & MODELS
+# ============================================================================
+# Large data files (configure paths based on your project)
+/data/
+/raw_data/
+/processed_data/
+/datasets/
+/dataset/
+!/data/.gitkeep
+*.csv
+*.xlsx
+*.xls
+*.json
+*.jsonl
+*.parquet
+*.feather
+*.arrow
+
+# Model files (deep learning checkpoints)
+/models/
+/checkpoints/
+/exp_results/
+/trained_models/
+!/models/.gitkeep
+*.h5
+*.pkl
+*.pickle
+*.joblib
+*.dill
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+*.model
+*.pt.tar
+*.tar.gz
+*.zip
+
+# ============================================================================
+# JUPYTER NOTEBOOKS
+# ============================================================================
+.ipynb_checkpoints/
+*.ipynb
+desktop.ini
+
+# ============================================================================
+# LOGGING & OUTPUT
+# ============================================================================
+/logs/
+/log/
+*.log
+*.log.*
+nohup.out
+logs.txt
+
+# Output and Results
+/output/
+/outputs/
+/results/
+/predictions/
+/inference/
+!/output/.gitkeep
+
+# ============================================================================
+# TESTING & COVERAGE
+# ============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+junit.xml
+coverage.xml
+*.cover
+.pytest/
+
+# ============================================================================
+# MACHINE LEARNING FRAMEWORKS & EXPERIMENT TRACKING
+# ============================================================================
+# MLflow
+mlruns/
+.mlflow/
+
+# Weights & Biases
+wandb/
+wandb_offline/
+
+# DVC (Data Version Control)
+.dvc/
+.dvc.local
+dvc.lock
+*.dvc.yaml
+*.dvc
+.dvcignore
+
+# Ray
+ray_results/
+~/.ray/
+
+# TensorBoard
+runs/
+logs/event.*
+
+# ============================================================================
+# DOCKER & CONTAINERIZATION
+# ============================================================================
+docker-compose.override.yml
+.dockerignore
+
+# ============================================================================
+# ENVIRONMENT VARIABLES & SECRETS
+# ============================================================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+secrets/
+*.key
+*.pem
+*.p12
+credentials.json
+config/credentials.json
+
+# ============================================================================
+# TEMPORARY & CACHE FILES
+# ============================================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+
+# ============================================================================
+# BUILD & DISTRIBUTION
+# ============================================================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+site/
+docs/_build/
+docs/generated/
+
+# ============================================================================
+# IDE TEMPORARY FILES
+# ============================================================================
+.vimrc
+.project
+.pydevproject
+.settings/
+.classpath
+.c9/
+*.launch
+.tern-port
+
+# ============================================================================
+# NODE MODULES (if using JS/Frontend tools)
+# ============================================================================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================================================================
+# DATABASE FILES
+# ============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sql
+
+# ============================================================================
+# TEMPORARY DEPLOYMENT FILES
+# ============================================================================
+*.pid
+*.seed
+*.pid.lock
+*.pem
+*.key
+
+# ============================================================================
+# PROFILING & BENCHMARKING
+# ============================================================================
+*.prof
+*.pcprofile
+*.cprofile
+.benchmarks/
+perf_data/
+
+# ============================================================================
+# MISCELLANEOUS
+# ============================================================================
+.bash_history
+.zsh_history
+.viminfo
+.python_history
+*.swp
+.editrc
+.inputrc
