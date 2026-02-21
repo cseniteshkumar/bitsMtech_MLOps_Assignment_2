@@ -1,0 +1,10 @@
+digest: 94270d01
+name: dataset
+profile: '{"features_shape": [41, 224, 224, 3], "features_size": 6171648, "features_nbytes":
+  6171648, "targets_shape": [41, 2], "targets_size": 82, "targets_nbytes": 656}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"uint8\", \"shape\": [-1, 224, 224, 3]}}]", "targets": "[{\"type\":
+  \"tensor\", \"tensor-spec\": {\"dtype\": \"int64\", \"shape\": [-1, 2]}}]"}}'
+source: '{"tags": {"mlflow.user": "niteshkumar", "mlflow.source.name": "modelTraining.ipynb",
+  "mlflow.source.type": "NOTEBOOK"}}'
+source_type: code
