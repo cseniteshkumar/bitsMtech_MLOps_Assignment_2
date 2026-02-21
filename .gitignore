@@ -76,21 +76,21 @@ $RECYCLE.BIN/
 # ============================================================================
 # MACHINE LEARNING - DATA & MODELS
 # ============================================================================
-# Large data files (configure paths based on your project)
-/data/
-/raw_data/
-/processed_data/
-/datasets/
-/dataset/
-!/data/.gitkeep
-*.csv
-*.xlsx
-*.xls
-*.json
-*.jsonl
-*.parquet
-*.feather
-*.arrow
+# # Large data files (configure paths based on your project)
+# /data/
+# /raw_data/
+# /processed_data/
+# /datasets/
+# /dataset/
+# !/data/.gitkeep
+# *.csv
+# *.xlsx
+# *.xls
+# *.json
+# *.jsonl
+# *.parquet
+# *.feather
+# *.arrow
 
 # Model files (deep learning checkpoints)
 /models/
@@ -166,8 +166,8 @@ coverage.xml
 # MACHINE LEARNING FRAMEWORKS & EXPERIMENT TRACKING
 # ============================================================================
 # MLflow
-mlruns/
-.mlflow/
+# mlruns/
+# .mlflow/
 
 # Weights & Biases
 wandb/
