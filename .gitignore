@@ -315,3 +315,4 @@ perf_data/
 *.swp
 .editrc
 .inputrc
+/DataFiles
