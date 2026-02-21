@@ -1,0 +1,7 @@
+artifact_location: file:///media/niteshkumar/SSD_Store_0_nvme/allPythoncodesWithPipEnv/BitsLearning/MLOps_Assignment/Assignment_2/bitsMtech_MLOps_Assignment_2/mlruns/516697590595924749
+creation_time: 1771685561004
+experiment_id: '516697590595924749'
+last_update_time: 1771685561004
+lifecycle_stage: active
+name: CNN_Model_Training_Experiment
+workspace: default
