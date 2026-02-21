@@ -19,7 +19,11 @@ ipykernel
 ipywidgets
 tqdm
 
+# ============================================================================
+# CORE DEEP LEARNING FRAMEWORKS 
 # Deep learning & NLP
+# ============================================================================
+
 torch
 torchvision
 torchaudio
@@ -29,6 +33,7 @@ transformers
 datasets
 sentencepiece
 tokenizers
+keras-preprocessing
 
 # Gradient boosting & tree models
 xgboost
@@ -77,15 +82,7 @@ python-multipart
 # Development, Testing, and Production Deployment
 # ============================================================================
 
-# ============================================================================
-# CORE DEEP LEARNING FRAMEWORKS
-# ============================================================================
-torch
-torchvision
-torchaudio
-tensorflow
-keras
-# tensorflow-gpu  # Uncomment for GPU support
+
 
 # ============================================================================
 # COMPUTER VISION LIBRARIES
