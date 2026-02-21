@@ -114,10 +114,10 @@ plotly
 # MODEL ARCHITECTURES & PRE-TRAINED MODELS
 # ============================================================================
 timm
-mmcv
+# mmcv
 mmengine
-torchmetrics
-torchvision-models
+# torchmetrics
+# torchvision-models
 
 # ============================================================================
 # WEB FRAMEWORKS & API DEVELOPMENT
@@ -254,7 +254,7 @@ PyJWT
 # ============================================================================
 numba
 cython
-cupy  # For GPU acceleration (requires CUDA)
+# cupy  # For GPU acceleration (requires CUDA)
 
 # ============================================================================
 # VERSION CONTROL & GIT HELPERS
