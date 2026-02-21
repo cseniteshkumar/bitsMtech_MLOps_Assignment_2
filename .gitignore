@@ -98,10 +98,10 @@ $RECYCLE.BIN/
 /exp_results/
 /trained_models/
 !/models/.gitkeep
-*.h5
-*.pkl
-*.pickle
-*.joblib
+# *.h5
+# *.pkl
+# *.pickle
+# *.joblib
 *.dill
 *.pt
 *.pth
@@ -111,7 +111,17 @@ $RECYCLE.BIN/
 *.model
 *.pt.tar
 *.tar.gz
+
+
+# ============================================================================
+# Trainging artifacts / Data Files
+# ============================================================================
+*.jpg
+*.jpeg
+*.png
 *.zip
+
+
 
 # ============================================================================
 # JUPYTER NOTEBOOKS
