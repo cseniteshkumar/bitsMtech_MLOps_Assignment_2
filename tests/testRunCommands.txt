@@ -1,0 +1,10 @@
+cd /media/niteshkumar/SSD_Store_0_nvme/allPythoncodesWithPipEnv/BitsLearning/MLOps_Assignment/Assignment_2/bitsMtech_MLOps_Assignment_2
+
+# Install pytest if not already installed
+pip install pytest pytest-asyncio
+
+# Run all deployment tests
+pytest tests/test_deployment.py -v
+
+# Run with coverage
+pytest tests/test_deployment.py -v --cov=app
