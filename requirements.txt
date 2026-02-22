@@ -267,3 +267,4 @@ python-version
 
 
 prometheus_fastapi_instrumentator
+httpx
