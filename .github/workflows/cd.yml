@@ -66,28 +66,34 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
         platforms: linux/amd64,linux/arm64
-  
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: http://${{ secrets.DEPLOY_HOST }}/
+
+
+##### At present we are running the deployment on local machine, 
+##### so the deployment step is commented out. To enable it, simply 
+##### uncomment the following section and ensure your secrets are 
+##### properly configured.
+
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: production
+  #     url: http://${{ secrets.DEPLOY_HOST }}/
     
-    steps:
-    - name: Deploy to production via SSH
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
-        key: ${{ secrets.DEPLOY_KEY }}
-        script: |
-          cd /app
-          docker pull ${{ needs.build.outputs.image }}
-          export IMAGE_TAG=${{ needs.build.outputs.tag }}
-          export IMAGE_NAME=${{ env.IMAGE_NAME }}
-          docker-compose up -d --remove-orphans
-          echo "Waiting for FastAPI to start..."
-          sleep 10
-          curl -f http://localhost:8000/api/health || exit 1
-          echo "✓ Deployment successful!"
+  #   steps:
+  #   - name: Deploy to production via SSH
+  #     uses: appleboy/ssh-action@v1.0.3
+  #     with:
+  #       host: ${{ secrets.DEPLOY_HOST }}
+  #       username: ${{ secrets.DEPLOY_USER }}
+  #       key: ${{ secrets.DEPLOY_KEY }}
+  #       script: |
+  #         cd /app
+  #         docker pull ${{ needs.build.outputs.image }}
+  #         export IMAGE_TAG=${{ needs.build.outputs.tag }}
+  #         export IMAGE_NAME=${{ env.IMAGE_NAME }}
+  #         docker-compose up -d --remove-orphans
+  #         echo "Waiting for FastAPI to start..."
+  #         sleep 10
+  #         curl -f http://localhost:8000/api/health || exit 1
+  #         echo "✓ Deployment successful!"
