@@ -9,7 +9,10 @@ import tempfile
 import time
 
 # Add parent directory to path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Add app directory to path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from app.models.model import Cnn, ImageClassifier
 from app.core.config import settings
