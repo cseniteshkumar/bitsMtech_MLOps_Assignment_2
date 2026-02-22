@@ -193,7 +193,7 @@ logs/event.*
 # DOCKER & CONTAINERIZATION
 # ============================================================================
 docker-compose.override.yml
-.dockerignore
+# .dockerignore
 
 # ============================================================================
 # ENVIRONMENT VARIABLES & SECRETS
