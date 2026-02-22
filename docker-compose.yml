@@ -30,11 +30,24 @@ services:
       - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./logs/prometheus:/var/log/prometheus  # Add log directory mount
+      - prometheus-data:/prometheus  # Add persistent storage
     networks:
       - mlops-network
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--log.level=info'  # Add log level
+      - '--log.format=json'  # Add log format
+      - '--storage.tsdb.path=/prometheus'  # Add storage path
+    logging:  # Add Docker logging configuration
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 networks:
   mlops-network:
     driver: bridge
+
+volumes:  # Add volumes section
+  prometheus-data:
