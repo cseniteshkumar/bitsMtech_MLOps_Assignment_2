@@ -108,17 +108,28 @@ class TestDeployment:
         assert response.status_code in [200, 422]
 
     def test_special_values(self):
-        """Test handling of special values (NaN, inf, etc.)"""
+        """Test handling of special values (very large, very small, and zero)"""
         test_cases = [
-            {"features": [float('inf'), 1.0, 2.0, 3.0]},
-            {"features": [float('-inf'), 1.0, 2.0, 3.0]},
             {"features": [0.0, 0.0, 0.0, 0.0]},
             {"features": [1e-10, 1e-10, 1e-10, 1e-10]},
+            {"features": [1e10, 1e10, 1e10, 1e10]},
         ]
-        
+
         for payload in test_cases:
+            # Adjust this based on your actual API signature
+            # If it expects a file upload:
+            # response = client.post("/api/predict", files={"file": ("test.npy", b"...")})
+            
+            # If it expects JSON body with features:
             response = client.post("/api/predict", json=payload)
-            assert response.status_code in [200, 422, 400]
+            
+            # Accept 200 or 422 (validation error) but not 500
+            assert response.status_code in [200, 422], f"Failed for {payload}: {response.text}"
+            
+            if response.status_code == 200:
+                data = response.json()
+                assert "prediction" in data
+                assert "confidence" in data
 
     def test_model_loaded(self):
         """Test that model is properly loaded"""

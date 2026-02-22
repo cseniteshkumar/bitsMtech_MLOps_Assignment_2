@@ -1,19 +1,11 @@
 from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
-from pydantic import BaseModel, ConfigDict
-
 class PredictionRequest(BaseModel):
     """Request schema for predictions"""
     features: list[float]
     
     model_config = ConfigDict(from_attributes=True)
-
-# class PredictionResponse(BaseModel):
-#     """Response schema for predictions"""
-#     prediction: float
-    
-#     model_config = ConfigDict(from_attributes=True)
 
 class PredictionResponse(BaseModel):
     """Response model for prediction"""
@@ -24,8 +16,8 @@ class PredictionResponse(BaseModel):
     success: bool
     error: Optional[str] = None
     
-    class Config:
-        json_schema_extra = {
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "prediction": "dog",
                 "confidence": 0.9876,
@@ -35,6 +27,7 @@ class PredictionResponse(BaseModel):
                 "error": None
             }
         }
+    )
 
 class HealthResponse(BaseModel):
     """Health check response"""
