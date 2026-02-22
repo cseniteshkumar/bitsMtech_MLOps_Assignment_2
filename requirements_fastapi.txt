@@ -1,0 +1,9 @@
+FastAPI
+uvicorn
+torch
+torchvision
+Pillow
+pydantic
+python-multipart
+numpy
+scikit-learn
