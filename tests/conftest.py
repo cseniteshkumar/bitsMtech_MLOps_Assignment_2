@@ -2,9 +2,23 @@ import pytest
 from pathlib import Path
 import sys
 
-# Add app to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
+# # Add app to path
+# sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+
+from fastapi.testclient import TestClient
+from app.main import app
+
+
+
+@pytest.fixture
+def client():
+    return TestClient(app)
 
 @pytest.fixture(scope="session")
 def test_config():

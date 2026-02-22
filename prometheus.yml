@@ -1,9 +1,18 @@
 global:
-  scrape_interval: 15s
-  evaluation_interval: 15s
+  scrape_interval: 15s     # How often to pull metrics (default is 1m)
+  evaluation_interval: 15s # How often to evaluate alerting rules
 
+# A scrape configuration containing exactly one endpoint to scrape:
 scrape_configs:
-  - job_name: 'mlops-api'
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
     static_configs:
-      - targets: ['localhost:8000']
-    metrics_path: '/metrics'
+      - targets: ["localhost:9090"]
+
+  - job_name: "mlops-classifier-api"
+    scrape_interval: 5s     # Faster scraping for real-time inference tracking
+    static_configs:
+      # We use the container name/service name from your docker-compose
+      - targets: ["api:8000"]
+    # If your metrics aren't at the root, specify the path (default is /metrics)
+    metrics_path: /metrics

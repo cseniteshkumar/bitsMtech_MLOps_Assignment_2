@@ -8,11 +8,17 @@ import json
 # Add app directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from pydantic import BaseModel, ConfigDict
+
+
 from app.main import app
 from app.schemas.prediction import PredictionRequest, PredictionResponse
 
 
 client = TestClient(app)
+
+
+
 
 
 class TestDeployment:

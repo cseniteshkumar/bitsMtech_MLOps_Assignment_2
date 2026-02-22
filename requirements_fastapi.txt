@@ -7,3 +7,4 @@ pydantic
 python-multipart
 numpy
 scikit-learn
+prometheus_fastapi_instrumentator

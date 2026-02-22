@@ -1,5 +1,19 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
+
+from pydantic import BaseModel, ConfigDict
+
+class PredictionRequest(BaseModel):
+    """Request schema for predictions"""
+    features: list[float]
+    
+    model_config = ConfigDict(from_attributes=True)
+
+# class PredictionResponse(BaseModel):
+#     """Response schema for predictions"""
+#     prediction: float
+    
+#     model_config = ConfigDict(from_attributes=True)
 
 class PredictionResponse(BaseModel):
     """Response model for prediction"""

@@ -263,3 +263,7 @@ dvc
 # ENVIRONMENT MANAGEMENT
 # ============================================================================
 python-version
+
+
+
+prometheus_fastapi_instrumentator

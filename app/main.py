@@ -3,12 +3,20 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import router
 from app.core.config import settings
 
+from prometheus_fastapi_instrumentator import Instrumentator
+
+
+
 # Initialize FastAPI app
 app = FastAPI(
     title=settings.API_TITLE,
     version=settings.API_VERSION,
     description="Cat vs Dog Image Classification API"
 )
+
+
+# This single line instruments your app and creates the /metrics endpoint
+Instrumentator().instrument(app).expose(app)
 
 # Add CORS middleware
 app.add_middleware(
